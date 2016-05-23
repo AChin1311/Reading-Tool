@@ -1,0 +1,31 @@
+#container { 
+  margin-top:1%; 
+  margin-left:6%; 
+  margin-right:6%; 
+  margin-bottom:auto; 
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+#article {
+  font-size:32px;
+  line-height: 50px;
+  background:none
+}
+
+.parent {
+  background: none; 
+  float:left;
+  padding:4px;
+  z-index: 1;
+}
+
+.child {
+  visibility: hidden;
+  position: absolute;
+  color: red;
+  font-weight: normal;
+  background: #e5e5e5;
+  z-index: 5;
+}
