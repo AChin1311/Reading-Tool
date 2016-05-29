@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 var times = Array.apply(null, Array(268)).map(Number.prototype.valueOf,0);
 var timer;
-var focustime = 00;
+var focustime = 1000;
 function add(id_str) {
   var sub = id_str.substring(3, 6);
   var id = parseInt(sub, 10);

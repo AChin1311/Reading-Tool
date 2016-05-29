@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Translate API Example</title>
+  </head>
+  <body>
+    <div id="sourceText">America. Online. is. one. of. the. big. names. on. the. internet,. and. unlike. many. other. digital. companies,. it. actually. makes. a. profit.. But. the. company. which. its. rivals. call. the. "Cyber-cockroach". was. launched. only. in. 1992.. Before. that. it. was. a. small. firm. called. Control. Video. Corporation,. and. it. made. video. games.. Then. Steve. Case,. a. former. Pizza. Hut. marketing. executive. arrived. and. took. the. company. online.. Innovative,. fast. moving,. and. user-friendly,. America. Online. appeals. to. people. who. want. to. surf. the. internet,. but. who. do. not. have. a. lot. of. experience.. For. the. same. reason. "techies",. people. who. think. they. are. more. expert. with. computers,. look. down. on. America. Online. and. its. users.. Recently. America. Online. (or. AOL,. as. it. calls. itself). joined. with. Time. Warner. -. a. multi-million. dollar. movie. and. magazine. company. -. to. create. a. multimedia. giant.. Now,. AOL. has. begun. to. expand. abroad.. In. many. European. countries,. including. the. United. Kingdom,. it. is. hard. to. buy. a. computer. magazine. that. does. not. have. a. free. AOL. introductory. offer.. The. company. also. puts. advertisements. onto. the. television,. and. employs. people. to. hand. out. its. free. introductory. disks. at. places. like. train. stations.. As. the. internet. gets. faster. AOL. is. changing.. With. many. homes. getting. high-speed. connections. through. fibre. optic. cables. or. the. new. ASDL. technology,. the. "Cyber-cockroach". will. have. to. show. that,. like. real. cockroaches,. it. can. survive. in. almost. any. environment.</div>
+    <div id="translation"></div>
+    <script>
+      var html;
+      function translateText(response) {
+        document.getElementById("translation").innerHTML += "<br>" + response.data.translations[0].translatedText + "<br>";
+        // console.log(response.data.translations[0].translatedText);
+      }
+      var newScript = document.createElement('script');
+      newScript.type = 'text/javascript';
+      var sourceText = escape(document.getElementById("sourceText").innerHTML);
+      var text = sourceText.split('%20');
+      console.log(text);
+      
+      var source = 'https://www.googleapis.com/language/translate/v2?key=AIzaSyBNT2KuiuWBUBKp12URVTps-0qT90JLj0w&source=en&target=zh-TW&callback=translateText&q=' + sourceText;
+      newScript.src += source;
+      document.getElementsByTagName('head')[0].appendChild(newScript);
+      // console.log(html);
+      // document.getElementById("translation").innerHTML = html;
+      
+    </script>
+  </body>
+</html>

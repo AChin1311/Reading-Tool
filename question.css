@@ -1,0 +1,22 @@
+
+#left_col {
+	float:left;
+	width:45%;
+	margin-left: 100px;
+	margin-top: 50px;
+	padding: 20px;
+	font-size: 24px;
+	line-height: 150%;
+	border-style: solid;
+}
+#right_col {
+	float:right;
+	width:30%;
+	margin-right: 150px;
+	margin-top: 50px;
+	font-size: 24px;
+	line-height: 150%;
+}
+li {
+	list-style-type: none;
+}
