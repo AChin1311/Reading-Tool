@@ -11,4 +11,5 @@ function submit() {
   if (q3)
     score += 1;
   console.log(score);
+  alert("You've submitted!");
 }

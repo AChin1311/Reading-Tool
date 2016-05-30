@@ -1,6 +1,7 @@
 
 #left_col {
 	float:left;
+	position: fixed;	
 	width:45%;
 	margin-left: 100px;
 	margin-top: 50px;
